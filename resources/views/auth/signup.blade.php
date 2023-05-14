@@ -326,7 +326,6 @@
                 <input type="text" id="name" class="fadeIn second" name="login" placeholder="Primer Nombre">
                 <label for="name">Apellido</label>
                 <input type="text" id="lname" class="fadeIn second" name="login" placeholder="Apellido">
-                
                 <label for="login">Correo Electronico</label>
                 <input type="text" id="login" class="fadeIn second" name="login"
                     placeholder="name@example.com">

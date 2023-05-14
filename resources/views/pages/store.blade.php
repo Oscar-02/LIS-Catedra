@@ -10,7 +10,6 @@
             @foreach ($products as $product)
                 <div class="col p-2">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ URL::asset('img/img-8.jpg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $product->productName }}</h5>
                         </div>

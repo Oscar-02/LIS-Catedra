@@ -48,3 +48,33 @@ Route::get('/signup', function () {
     return view('auth.signup');
 }) -> name('signup');
 
+Route::get('base', function () {
+    return view('admin.base');
+}) -> name('base');
+
+Route::get('/admin/products', [productsController::class, 'indexAdmin']) -> name('admin-products');
+
+Route::get('/admin/products/show/{id}', [productsController::class, 'show']) -> name('admin-products-show');
+
+Route::get('/admin/products/create', [productsController::class, 'create']) -> name('admin-products-create');
+
+Route::post('/admin/products', [productsController::class, 'store']) -> name('admin-products-store');
+
+Route::get('/admin/products/edit/{id}', [productsController::class, 'edit']) -> name('admin-products-edit');
+
+Route::post('/admin/products', [productsController::class, 'update']) -> name('admin-products-update');
+
+Route::get('/admin/products/delete/{id}', [productsController::class, 'destroy']) -> name('admin-products-delete');
+
+Route::get('/admin/clients', function () {
+    return view('admin.clients.all');
+}) -> name('admin-clients');
+
+Route::get('/admin/admins', function () {
+    return view('admin.admins.all');
+}) -> name('admin-admins');
+
+
+Route::get('/admin/orders', function () {
+    return view('admin.orders.all');
+}) -> name('admin-orders');
